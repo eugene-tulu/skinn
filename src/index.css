@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 41% 92%;
+    --foreground: 30 17% 8%;
+    --card: 45 59% 96%;
+    --card-foreground: 30 17% 8%;
+    --popover: 45 59% 96%;
+    --popover-foreground: 30 17% 8%;
+    --primary: 18 100% 50%;
+    --primary-foreground: 45 59% 96%;
+    --secondary: 42 38% 85%;
+    --secondary-foreground: 30 17% 8%;
+    --muted: 42 30% 86%;
+    --muted-foreground: 32 10% 38%;
+    --accent: 18 100% 50%;
+    --accent-foreground: 45 59% 96%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 45 59% 96%;
+    --border: 30 17% 8%;
+    --input: 30 17% 8%;
+    --ring: 18 100% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-image: radial-gradient(rgba(25, 21, 18, 0.055) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.01em;
+  }
+  .shadow-hard {
+    box-shadow: 4px 4px 0 0 #191512;
+  }
+  .shadow-hard-sm {
+    box-shadow: 2px 2px 0 0 #191512;
+  }
+  .shadow-hard-lg {
+    box-shadow: 7px 7px 0 0 #191512;
+  }
+  .card-brut {
+    @apply bg-card border-2 border-ink rounded-xl shadow-hard;
+  }
+  .card-brut-hover {
+    @apply transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-lg;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
