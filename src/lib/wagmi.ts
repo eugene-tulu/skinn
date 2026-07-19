@@ -1,12 +1,12 @@
 import { createConfig, http } from 'wagmi'
 import { injected } from 'wagmi/connectors'
-import { ACTIVE_CHAIN, monadMainnet, monadTestnet } from './monad'
+import { monadTestnet, monadMainnet } from './monad'
 
 export const wagmiConfig = createConfig({
-  chains: [ACTIVE_CHAIN],
+  chains: [monadTestnet, monadMainnet],
   connectors: [injected({ shimDisconnect: true })],
   transports: {
-    [monadTestnet.id]: http(),
-    [monadMainnet.id]: http(),
+    [monadTestnet.id]: http('https://testnet-rpc.monad.xyz'),
+    [monadMainnet.id]: http('https://rpc.monad.xyz'),
   },
 })

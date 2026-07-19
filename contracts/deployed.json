@@ -1,0 +1,9 @@
+{
+  "address": "0xA75F47cef46CA9853De49F6A3646ccA54261Bc51",
+  "chainId": 10143,
+  "chain": "monad-testnet",
+  "txHash": "0xd734c80f4774a4ca9162ce39692467a43d8709d916ef094621b6792d7c539f76",
+  "deployer": "0x0CaE4f05f49Cc7Df5f4ce5ad40A5bb1A66343a86",
+  "deployedAt": "2026-07-19T14:30:00+03:00",
+  "verified": "monadvision"
+}
