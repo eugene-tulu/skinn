@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router'
 import { WagmiProvider } from 'wagmi'
+import { Analytics } from '@vercel/analytics/react'
 import { Toaster } from '@/components/ui/sonner'
 import { wagmiConfig } from '@/lib/wagmi'
 import { Header } from '@/components/Header'
@@ -30,6 +31,7 @@ export default function App() {
         </footer>
       </div>
       <Toaster position="bottom-right" />
+      <Analytics />
     </WagmiProvider>
   )
 }
